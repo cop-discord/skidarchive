@@ -1,0 +1,1 @@
+# nothing here because I AM NOT WRITING EVERYTHING FOR THIS SHITTY README.

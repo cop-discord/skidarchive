@@ -1,0 +1,51 @@
+import discord
+
+
+class emojis:
+    blade = "<:blade_icon:959904151503011960>"
+    scare = "<:scare:930889255851540510>"
+    developer = "<:developer:963387194360352808>"
+
+    bot = ":bot:"
+    brilliance = ":brilliance:"
+    bravery = ":bravery:"
+    balance = ":balance:"
+    nitro = ":nitro:"
+    early = ":early:"
+    boost = ":boost:"
+
+    true = "<:true:963150661057384448>"
+    false = "<:fail:963149868698837062>"
+    punishment = "<:punishment:1038899738981969930>"
+
+    reply = "<:reply:958683643201589330>"
+    reply2 = "<:reply2:1006978340365799585>"
+    lock = "<:locked:1045748710837063751>"
+    unlock = "<:unlock:1045748775387402312>"
+
+    members = "<:members:963365421417906186>"
+    commands = "<:commands:963365456922697728>"
+    channels = "<:channel:1045750417457422397>"
+    python = "<:python:963365809957249044>"
+    discordpy = "<:discordpy:963365851510231050>"
+    ram = "<:ram:963365894015316008>"
+    cpu = "<:cpu:963365978190782484>"
+    ping = "<:ping:963150212971495424>"
+    badge = "<:badge:963156775039807518>"
+    link = "<:link:963156666256326656>"
+    miscellaneous = "<:miscellaneous:963389632358285342>"
+
+    home = "<:home:1045749123023904890>"
+    list = "<:list:963150405209034782>"
+    utility = "<:utility:963150947356405760>"
+    info = "<:info:1079787943016812625>"
+    moderation = "<:moderation:963149955017637978>"
+    fun = "<:fun:963150011569418240>"
+    config = "<:config:963370693611900938>"
+    configs = "<:configuration:1045750734152548412>"
+    function = "<:function:963383290780319834>"
+    image = "<:image:1045748496449413213>"
+    economy = "<:economy:977699822356299868>"
+    music = ":music:"
+    alias = "<:alias:1045748349518757889>"
+    dash = "<:dash:1144997970572484688>"

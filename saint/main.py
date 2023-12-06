@@ -1,0 +1,141 @@
+import discord, aiosqlite, os, asyncio, time, sys, random, aiohttp, datetime, requests, psutil, discord.ui
+from datetime import datetime
+from discord.ui import View, Button, Select
+from discord.ext import commands, tasks 
+from discord.gateway import DiscordWebSocket
+from utils.classes import Emojis
+from backend.classes import Emojis
+from backend.classes import Colors, Emojis
+from dotenv import load_dotenv
+import requests
+
+load_dotenv()
+
+responses = ["11% of people are left handed", "August has the highest percentage of births", "unless food is mixed with saliva you can't taste it", "the average person falls asleep in 7 minutes", "a bear has 42 teeth", "an ostrich's eye is bigger than its brain", "lemons contain more sugar than strawberries", "8% of people have an extra rib", "85% of plant life is found in the ocean", "Ralph Lauren's original name was Ralph Lifshitz", "rabbits like licorice", "the Hawaiian alphabet has 13 letters", "'Topolino' is the name for Mickey Mouse Italy", "a lobsters blood is colorless but when exposed to oxygen it turns blue", "armadillos have 4 babies at a time and are all the same sex", "reindeer like bananas", "the longest recorded flight of a chicken was 13 seconds", "birds need gravity to swallow", "the most commonly used letter in the alphabet is E", "the 3 most common languages in the world are Mandarin Chinese, Spanish and English", "dreamt is the only word that ends in mt", "the first letters of the months July through to November spell JASON"]
+
+os.environ["JISHAKU_NO_UNDERSCORE"] = "True"
+os.environ["JISHAKU_NO_DM_TRACEBACK"] = "True"
+os.environ["JISHAKU_HIDE"] = "True"
+os.environ["JISHAKU_FORCE_PAGINATOR"] = "True"
+os.environ["JISHAKU_RETAIN"] = "True"
+
+async def identify(self):
+    payload = {
+        'op': self.IDENTIFY,
+        'd': {
+            'token': self.token,
+            'properties': {
+                '$os': sys.platform,
+                '$browser': 'Discord iOS',
+                '$device': 'Discord iOS',
+                '$referrer': '',
+                '$referring_domain': ''
+            },
+            'compress': True,
+            'large_threshold': 250,
+            'v': 3
+        }
+    }
+
+    if self.shard_id is not None and self.shard_count is not None:
+        payload['d']['shard'] = [self.shard_id, self.shard_count]
+
+    state = self._connection
+    if state._activity is not None or state._status is not None:
+        payload['d']['presence'] = {
+            'status': state._status,
+            'game': state._activity,
+            'since': 0,
+            'afk': False
+        }
+
+    if state._intents is not None:
+        payload['d']['intents'] = state._intents.value
+
+    await self.call_hooks('before_identify', self.shard_id, initial=self._initial_identify)
+    await self.send_as_json(payload)
+
+DiscordWebSocket.identify = identify
+
+async def getprefix(bot, message):
+       if not message.guild: return ";"
+       selfprefix = ";" 
+       guildprefix = ";"
+       async with bot.db.cursor() as cursor:
+        await cursor.execute("SELECT * FROM selfprefix WHERE user_id = {}".format(message.author.id)) 
+        check = await cursor.fetchone()
+        if check is not None:
+         selfprefix = check[0]
+        await cursor.execute("SELECT prefix, * FROM prefixes WHERE guild_id = {}".format(message.guild.id)) 
+        res = await cursor.fetchone()
+        if res is not None: 
+            guildprefix = res[0]
+        elif res is None:
+            guildprefix = ";"    
+
+       return guildprefix, selfprefix  
+
+def get_status(name: str): 
+   if name == "competing": return discord.ActivityType.competing
+   elif name == "streaming": return discord.ActivityType.streaming
+   elif name == "playing": return discord.ActivityType.playing 
+   elif name == "watching": return discord.ActivityType.watching
+   elif name == "listening": return discord.ActivityType.listening
+    
+@tasks.loop(seconds=15)
+async def status(): 
+   lists = [f"watching {len(set(bot.get_all_members()))} users", "!help", f"helping {len(bot.guilds)} servers w rep", "!help", f"{psutil.cpu_percent()}% cpu usage", "!help"]
+   activities = ["watching"]
+   for a in activities:
+    for l in list: 
+     await bot.change_presence(status=discord.Status.idle, activity=discord.CustomActivity(type=get_status(a), name=l, url="https://twitch.tv/lol")) ##activity=discord.Activity
+     await asyncio.sleep(20)
+             
+@tasks.loop(seconds=60)
+async def stats():
+    embed1 = discord.Embed(color=0x2B2D31, description=f"<:repeatbutton:1129817608770818068> **loading informations**")
+    embed = discord.Embed(color=0x2B2D31, description=f" ").set_thumbnail(url=bot.user.display_avatar)
+    embed.add_field(name="Bot", value=f"Latency: `{round(bot.latency * 1000)}ms`\nServing: `{len(bot.guilds)} servers`\nMonitoring: `{len(set(bot.get_all_members()))} users`\nCommands: `{len(set(bot.walk_commands()))}`", inline=True)
+    embed.add_field(name="System:", value=f"CPU Usage: `{psutil.cpu_percent()}%`\nMemory Usage: `{psutil.virtual_memory().percent}%`\nAvailable Memory: `{psutil.virtual_memory().available * 100 / psutil.virtual_memory().total}%`", inline=True)
+    embed.set_footer(text="use", icon_url="https://cdn.discordapp.com/attachments/1095072604668305481/1134204121176625232/i1aqqAG.gif")
+    slay = bot.get_channel(1143273173111033866)
+    await slay.send(embed=embed)
+    msg = await slay.send(embed=embed1)
+    await msg.add_reaction("<a:w_w:1103337013656174652>")
+    await asyncio.sleep(0.5)
+    await msg.edit(embed=embed) 
+
+intents = discord.Intents.all()  
+
+class Client(commands.AutoShardedBot): #commands.AutoShardedBot 
+  def __init__(self):
+    super().__init__(
+        command_prefix=getprefix,
+        shards_count=4,
+        intents=intents,
+        help_command=None, 
+        case_insensitive=True,
+        allowed_mentions = discord.AllowedMentions(users=True),
+        strip_after_prefix=True,  
+        owner_ids=[1148300105758298123]
+    ) 
+    self.uptime = time.time()
+    
+  async def on_connect(self): 
+    setattr(bot, "db", await aiosqlite.connect("main.db"))
+    print("Attempting to connect to Discord's API")
+    await self.load_extension("jishaku")
+    for file in os.listdir("./cogs"): 
+      if file.endswith(".py"):
+        try: 
+            await self.load_extension("cogs." + file[:-3])
+            print("loaded extension {}".format(file[:-3])) 
+        except Exception as e: 
+           print("unable to load extension {} - {}".format(file[:-3], e))
+        
+  async def on_ready(self):
+    status.start()
+    stats.start()
+    print(f"logged in as {bot.user}")
+bot = Client()
+bot.run(os.getenv("saint"), reconnect=True) #main bot token: MTA4MjY4MjM1NjkxOTQ1NTg0NQ.GXNEM4.ewvby2VBffSIb1XaHIPNaQHbU_0q6fBpol6IH0

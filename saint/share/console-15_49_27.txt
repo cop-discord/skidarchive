@@ -1,0 +1,339 @@
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+2023-05-05 09:37:46 INFO     discord.client logging in using static token
+2023-05-05 09:37:46 INFO     discord.gateway Shard ID 0 has connected to Gateway (Session ID: ad0f057d9ac21678ad9b13b8d23511e4).
+Attempting to connect to Discord's API
+loaded extension lastfm
+loaded extension events
+loaded extension vanity
+loaded extension slash
+loaded extension utility
+loaded extension emoji
+loaded extension reactionrole
+loaded extension discrim
+loaded extension moderation
+loaded extension voicemaster
+loaded extension imageonly
+loaded extension jail
+loaded extension autoresponder
+loaded extension server
+loaded extension autorole
+loaded extension joindm
+loaded extension info
+loaded extension owner
+loaded extension tictactoe
+loaded extension antinuke
+loaded extension vanityevents
+loaded extension roleplay
+loaded extension fun
+loaded extension tiktok
+loaded extension welcome
+loaded extension autoreact
+loaded extension autopost
+2023-05-05 09:37:49 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/main.py", line 349, in on_ready
+    sserverleave.start()
+NameError: name 'sserverleave' is not defined
+2023-05-05 09:37:49 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/cogs/events.py", line 77, in on_ready
+    await log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+  File "/home/container/main.py", line 169
+    embed.set_footer(text="powered by {}".format(bot.user.name)) timestamp=datetime.datetime.now()
+                                                                 ^^^^^^^^^
+SyntaxError: invalid syntax
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+  File "/home/container/main.py", line 169
+    embed.set_footer(text="powered by {}".format(bot.user.name)) timestamp=datetime.datetime.now()
+                                                                 ^^^^^^^^^
+SyntaxError: invalid syntax
+[Pterodactyl Daemon]: ---------- Detected server process in a crashed state! ----------
+[Pterodactyl Daemon]: Exit code: 1
+[Pterodactyl Daemon]: Out of memory: false
+[Pterodactyl Daemon]: Aborting automatic restart, last crash occurred less than 60 seconds ago.
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+2023-05-05 09:45:25 INFO     discord.client logging in using static token
+2023-05-05 09:45:26 INFO     discord.gateway Shard ID 0 has connected to Gateway (Session ID: aebdf2ffc39cd1f3bea8883cfbd1698e).
+Attempting to connect to Discord's API
+loaded extension lastfm
+loaded extension events
+loaded extension vanity
+loaded extension slash
+loaded extension utility
+loaded extension emoji
+loaded extension reactionrole
+loaded extension discrim
+loaded extension moderation
+loaded extension voicemaster
+loaded extension imageonly
+loaded extension jail
+loaded extension autoresponder
+loaded extension server
+loaded extension autorole
+loaded extension joindm
+loaded extension info
+loaded extension owner
+loaded extension tictactoe
+loaded extension antinuke
+loaded extension vanityevents
+loaded extension roleplay
+loaded extension fun
+loaded extension tiktok
+loaded extension welcome
+loaded extension autoreact
+loaded extension autopost
+2023-05-05 09:45:29 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/main.py", line 349, in on_ready
+    sserverleave.start()
+NameError: name 'sserverleave' is not defined
+2023-05-05 09:45:29 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/cogs/events.py", line 77, in on_ready
+    await log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+2023-05-05 09:46:02 INFO     discord.client logging in using static token
+2023-05-05 09:46:03 INFO     discord.gateway Shard ID 0 has connected to Gateway (Session ID: dbd435584ef174a683db9f784f30ec6b).
+Attempting to connect to Discord's API
+loaded extension lastfm
+loaded extension events
+loaded extension vanity
+loaded extension slash
+loaded extension utility
+loaded extension emoji
+loaded extension reactionrole
+loaded extension discrim
+loaded extension moderation
+loaded extension voicemaster
+loaded extension imageonly
+loaded extension jail
+loaded extension autoresponder
+loaded extension server
+loaded extension autorole
+loaded extension joindm
+loaded extension info
+loaded extension owner
+loaded extension tictactoe
+loaded extension antinuke
+loaded extension vanityevents
+loaded extension roleplay
+loaded extension fun
+loaded extension tiktok
+loaded extension welcome
+loaded extension autoreact
+loaded extension autopost
+2023-05-05 09:46:07 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/main.py", line 349, in on_ready
+    sserverleave.start()
+NameError: name 'sserverleave' is not defined
+2023-05-05 09:46:07 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/cogs/events.py", line 77, in on_ready
+    await log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'
+2023-05-05 09:46:13 WARNING  discord.state Somehow timed out waiting for chunks for guild ID 1026047846136414228.
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+2023-05-05 09:47:19 INFO     discord.client logging in using static token
+2023-05-05 09:47:20 INFO     discord.gateway Shard ID 0 has connected to Gateway (Session ID: 6ffaca05bcb38cb478857208b2665a7c).
+Attempting to connect to Discord's API
+loaded extension lastfm
+loaded extension events
+loaded extension vanity
+loaded extension slash
+loaded extension utility
+loaded extension emoji
+loaded extension reactionrole
+loaded extension discrim
+loaded extension moderation
+loaded extension voicemaster
+loaded extension imageonly
+loaded extension jail
+loaded extension autoresponder
+loaded extension server
+loaded extension autorole
+loaded extension joindm
+loaded extension info
+loaded extension owner
+loaded extension tictactoe
+loaded extension antinuke
+loaded extension vanityevents
+loaded extension roleplay
+loaded extension fun
+loaded extension tiktok
+loaded extension welcome
+loaded extension autoreact
+loaded extension autopost
+logged in as week#4900
+2023-05-05 09:47:33 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/cogs/events.py", line 77, in on_ready
+    await log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'female'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 93, in female
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'male'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 114, in male
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'anime'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 135, in anime
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'banner'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 181, in banner
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'fgif'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 202, in fgif
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'mgif'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 223, in mgif
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'agif'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 244, in agif
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)", timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'stats'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 316, in stats
+    await stat_log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'
+2023-05-05 09:47:33 ERROR    discord.ext.tasks Unhandled exception in internal background task 'ricon'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 166, in ricon
+    embed = discord.Embed(color=0x2B2D31, description="[our pinterest](https://www.pinterest.com/proxypfps/)",  timestamp=datetime.datetime.now())
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2023-05-05 09:48:33 INFO     discord.gateway Shard ID 0 has successfully RESUMED session 6ffaca05bcb38cb478857208b2665a7c.
+[Pterodactyl Daemon]: Checking server disk space usage, this could take a few seconds...
+[Pterodactyl Daemon]: Updating process configuration files...
+[Pterodactyl Daemon]: Ensuring file permissions are set correctly, this could take a few seconds...
+[Pterodactyl Daemon]: Pulling Docker container image, this could take a few minutes to complete...
+[Pterodactyl Daemon]: Finished pulling Docker container image
+Python 3.10.11
+:/home/container$ ${STARTUP_COMMAND}
+2023-05-05 09:48:40 INFO     discord.client logging in using static token
+2023-05-05 09:48:41 INFO     discord.gateway Shard ID 0 has connected to Gateway (Session ID: 619d6b285624c441dece5efce55ac9cd).
+Attempting to connect to Discord's API
+loaded extension lastfm
+loaded extension events
+loaded extension vanity
+loaded extension slash
+loaded extension utility
+loaded extension emoji
+loaded extension reactionrole
+loaded extension discrim
+loaded extension moderation
+loaded extension voicemaster
+loaded extension imageonly
+loaded extension jail
+loaded extension autoresponder
+loaded extension server
+loaded extension autorole
+loaded extension joindm
+loaded extension info
+loaded extension owner
+loaded extension tictactoe
+loaded extension antinuke
+loaded extension vanityevents
+loaded extension roleplay
+loaded extension fun
+loaded extension tiktok
+loaded extension welcome
+loaded extension autoreact
+loaded extension autopost
+logged in as week#4900
+2023-05-05 09:48:44 ERROR    discord.client Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/container/cogs/events.py", line 77, in on_ready
+    await log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'
+2023-05-05 09:48:44 ERROR    discord.ext.tasks Unhandled exception in internal background task 'stats'.
+Traceback (most recent call last):
+  File "/home/container/.local/lib/python3.10/site-packages/discord/ext/tasks/__init__.py", line 239, in _loop
+    await self.coro(*args, **kwargs)
+  File "/home/container/main.py", line 316, in stats
+    await stat_log.send(embed=embed)
+AttributeError: 'NoneType' object has no attribute 'send'

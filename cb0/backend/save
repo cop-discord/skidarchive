@@ -1,0 +1,93 @@
+import discord, datetime, asyncio, aiohttp, requests, json, asyncio
+from discord.ext import commands, tasks
+from backend.classes import Colors, Emojis
+from cogs.events import sendmsg, sendmsgg, blacklist, noperms
+
+
+
+class Automod(commands.Cog):
+    def __init__(self, bot: commands.AutoShardedBot):
+        self.bot = bot
+
+@commands.hybrid_command(description="music", aliases=["bb", "bass"])
+async def bassboost(ctx):
+    print("bassboost")
+
+@commands.hybrid_command(description="music")
+async def bump(ctx):
+    print("bump")
+
+@commands.hybrid_command(description="music", aliases=["cl", "cls"])
+async def clear(ctx):
+    print("clear")
+
+@commands.hybrid_command(description="music", aliases=["leave", "exit", "quit", "dc", "stop"])
+async def disconnect(ctx):
+    print("disconnect")
+
+@commands.hybrid_command(description="music", aliases=["save"])
+async def grab(ctx):
+    print("grab")
+
+@commands.hybrid_command(description="music", aliases=["l", "repeat"])
+async def loop(ctx):
+    print("loop")
+
+@commands.hybrid_command(description="music", aliases=["lq", "repeatqueue", "rq"])
+async def loopqueue(ctx):
+    print("loopqueue")
+
+@commands.hybrid_command(description="music", aliases=["ly"])
+async def lyrics(ctx):
+    print("lyrics")
+
+@commands.hybrid_command(description="music", aliases=["musicnowplaying", "mnow playing", "mnp", "npm"])
+async def musicnowplaying(ctx):
+    print("musicnowplaying")
+
+@commands.hybrid_command(description="music")
+async def pause(ctx):
+    print("pause")
+
+@commands.hybrid_command(description="music", aliases=["p"])
+async def play(ctx):
+    print("play")
+
+@commands.hybrid_command(description="music", aliases=["q"])
+async def queue(ctx):
+    print("queue")
+
+@commands.hybrid_command(description="music", aliases=["rs"])
+async def resume(ctx):
+    print("resume")
+
+@commands.hybrid_command(description="music", aliases=["se"])
+async def search(ctx):
+    print("search")
+
+@commands.hybrid_command(description="music", aliases=["forward"])
+async def seek(ctx):
+    print("seek")
+
+@commands.hybrid_command(description="music", aliases=["shuff"])
+async def shuffle(ctx):
+    print("shuffle")
+
+@commands.hybrid_command(description="music", aliases=["s", "next"])
+async def skip(ctx):
+    print("skip")
+
+@commands.hybrid_command(description="music", aliases=["st"])
+async def skipto(ctx):
+    print("skipto")
+
+@commands.hybrid_command(description="music", aliases=["vol"])
+async def volume(ctx):
+    print("volume")
+
+@commands.hybrid_command(description="music", aliases=["yt"])
+async def youtube(ctx):
+    print("youtube")
+
+async def setup(bot):
+    await bot.add_cog(Automod(bot))    

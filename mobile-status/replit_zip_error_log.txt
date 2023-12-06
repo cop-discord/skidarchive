@@ -1,0 +1,2 @@
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/json5","time":"2023-07-19T12:19:55Z"}
+{"error":".zip archives do not support non-regular files","level":"error","msg":"unable to write file node_modules/.bin/mime","time":"2023-07-19T12:19:55Z"}
